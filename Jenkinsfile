@@ -10,13 +10,19 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running Unit Tests'
+                echo 'Running Tests'
+            }
+        }
+
+        stage('Data Validation') {
+            steps {
+                echo 'Validating Data'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying to Production'
+                echo 'Deploying Application'
             }
         }
     }
